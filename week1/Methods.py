@@ -19,3 +19,7 @@ cal_circle = cal.circle_area(5)
 print('Rectangle Area = ' ,cal_rec)
 print('Triangle area = ', cal_tri)
 print('Circle Area = ',cal_circle)
+
+print('Test Triangle Area' ,Calculate_area.triangle_area(5, 6))
+print('Test Circle Area', Calculate_area.circle_area(5))
+print('Test Rectangle Area', Calculate_area.rectangle_area(5,4,6))
