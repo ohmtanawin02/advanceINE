@@ -1,10 +1,10 @@
 import psycopg2
 try:
     connection = psycopg2.connect(user="postgres",
-                                    password ="pynative@#29",
+                                    password ="ome0895114530",
                                     host="127.0.0.1",
                                     port="5432",
-                                    database="postgres")
+                                    database="mydb")
 
     cursor = connection.cursor()
 

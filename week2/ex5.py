@@ -2,10 +2,10 @@ import psycopg2
 def getStudentDetails(name):
     try:
         connection = psycopg2.connect(user="postgres",
-                                        password ="pynative@#29",
-                                        host="127.0.0.1",
-                                        port="5432",
-                                        database="postgres")
+                                    password ="ome0895114530",
+                                    host="127.0.0.1",
+                                    port="5432",
+                                    database="mydb")
 
         cursor = connection.cursor()
         postgreSQL_select_Query = "select * from students where f_name = %s"
