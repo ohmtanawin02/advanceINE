@@ -28,5 +28,5 @@ def getStudentDetails(name):
             connection.close()
             print("PostgreSQL connection is closed")
 
-getStudentDetails('Anirach')
-getStudentDetails('Beesuda')
+getStudentDetails('Tanawin')
+getStudentDetails('penthai')

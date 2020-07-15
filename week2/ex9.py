@@ -2,7 +2,7 @@ import psycopg2
 def deleteStudent(name):
     try:
         connection = psycopg2.connect(user="postgres",
-                                        password ="pynative@#29",
+                                        password ="ome0895114530",
                                         host="127.0.0.1",
                                         port="5432",
                                         database="mydb")
@@ -33,4 +33,4 @@ def deleteStudent(name):
             connection.close()
             print("PostgreSQL connection is closed")
 
-deleteStudent('Nuttapan')
+deleteStudent('penthai')

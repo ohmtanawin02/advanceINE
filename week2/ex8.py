@@ -16,6 +16,7 @@ def updateEmail(name, new_e_mail):
         
         postgreSQL_select_Query = "update students set e_mail = %s where f_name = %s"
         cursor.execute(postgreSQL_select_Query,(new_e_mail,name,))
+        connection.commit()
 
         postgreSQL_select_Query = "select * from students where f_name = %s"
         cursor.execute(postgreSQL_select_Query, (name,))
@@ -32,4 +33,4 @@ def updateEmail(name, new_e_mail):
             connection.close()
             print("PostgreSQL connection is closed")
 
-updateEmail('Anirach', 'Anirach@ieee.org')
+updateEmail('Tanawin', 'againnakub@ieee.org')
