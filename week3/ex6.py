@@ -10,7 +10,7 @@ def index():
 def sign():
     return render_template('sign.html')
 
-@app.route('/process', methods=['POST'])
+@app.route('/process', methods=['POST']) #process อันนี้ไม่ใช่หน้า แต่เป็น process ที่ทำงานอยู่เบื้องหลัง
 def process():
     name = request.form['name']
     comment = request.form['comment']
