@@ -1,11 +1,11 @@
 import requests
 
-parameter = {"name":"Thailand"}
-response = requests.get('https://restcountries.eu/rest/v2/regionalbloc/asean',params=parameter)
+payload = {"population": "65327652"}
+response = requests.get('https://restcountries.eu/rest/v2/regionalbloc/asean',params=payload)
+print(response.text)
+#data = response.json()
 
-data = response.json()
 
+#print(type(data))
 
-print(type(data))
-
-print(data)
+#print(data)
