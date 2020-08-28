@@ -1,8 +1,9 @@
 import requests
 
-payload = {"population": "65327652"}
-response = requests.get('https://restcountries.eu/rest/v2/regionalbloc/asean',params=payload)
-print(response.text)
+payload = {"name": "Thailand"}
+r = requests.post('https://restcountries.eu/rest/v2/regionalbloc/asean',data=payload)
+r_dict = r.json()
+print(r_dict["name"])
 #data = response.json()
 
 
