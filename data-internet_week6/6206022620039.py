@@ -6,7 +6,7 @@ r_dict = r.json()
 print(r_dict["name"])
 #data = response.json()
 
-
+#lalala
 #print(type(data))
 
 #print(data)
