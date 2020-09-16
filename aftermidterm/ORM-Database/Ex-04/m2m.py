@@ -84,6 +84,9 @@ order2 = Order(name="Second Order")
 order1.add_products([(prod1, 4),(prod2,5),(prod3,4)])
 order2.add_products([(prod2, 6),(prod1,1),(prod3,2),(prod4,1)])
 
+obj=session.query(Order).filter(Order.name=='First Order').first()
+session.delete(obj)
+
 session.commit()
 
 print("Products array of order1 : ")
