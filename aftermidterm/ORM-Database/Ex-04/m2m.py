@@ -10,14 +10,14 @@ Base = declarative_base()
 class Order_Product(Base):
     __tablename__ = 'order_product'
     id = Column(String(35), primary_key=True, unique=True)
-    order_is = Column(Integer, ForeignKey('orders.id'), primary_key=True)
+    order_id = Column(Integer, ForeignKey('orders.id'), primary_key=True)
     product_id = Column(Integer, ForeignKey('products.id'), primary_key=True)
     quantity = Column(Integer)
 
     order =relationship("Order",backref=backref(
         "order_products", cascade="all, delete-orphan"))
     product =relationship("Product", backref=backref(
-        "order_products", cascade="all, delete-orphan0"))
+        "order_products", cascade="all, delete-orphan"))
     
     def __init__(self, order=None, product=None, quantity=None):
         self.id = uuid.uuid4().hex
@@ -67,7 +67,7 @@ class Order(Base):
 Base.metadata.drop_all(engine)
 Base.metadata.create_all(engine)
 
-Session = sessionmaker(bing=engine)
+Session = sessionmaker(bind=engine)
 session = Session()
 
 prod1 = Product(name="Oreo")

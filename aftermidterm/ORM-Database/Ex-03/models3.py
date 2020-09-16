@@ -4,7 +4,7 @@ from sqlalchemy import Column, Integer, String, DateTime, Float
 
 Base = declarative_base()
 
-class Member(Base):
+class Book(Base):
     __tablename__ = 'books'
     id = Column(Integer, primary_key=True)
     title = Column(String)

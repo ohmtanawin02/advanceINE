@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 import yaml
 from configs import DATABASE_URI, f_yam
-from models import Base, Book
+from models3 import Base, Book
 
 engine = create_engine(DATABASE_URI)
 
@@ -33,7 +33,7 @@ def load_yaml(fn):
             bookyml = Book(**data)
             s.add(bookyml)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     recreate_database()
     # add_data()
 
