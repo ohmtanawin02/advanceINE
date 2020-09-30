@@ -14,8 +14,8 @@ class AsyncZip(threading.Thread):
         f.close()
         print('Finished background zip of:', self.infile)
 
-background = AsyncZip('7-Multi-threading/mydata.txt',
-                        '7-Multi-threading/myarchive.zip')
+background = AsyncZip('/Users/INE-01/Desktop/advanceINE-1/aftermidterm/ORM-Database/Multi Treding/mydata.txt',
+                        '/Users/INE-01/Desktop/advanceINE-1/aftermidterm/ORM-Database/Multi Treding/myarchive.zip')
 background.start()
 print('The main program continues to run in foreground.')
 
